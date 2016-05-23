@@ -7,7 +7,7 @@ module Api
     end
 
     def render_rescue_json(exception)
-      render json: { error: exception.message }, status: 500
+      render json: { error: "Oops. Something went wrong." }, status: 500
     end
   end
 end
