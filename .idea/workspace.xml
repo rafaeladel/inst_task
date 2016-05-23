@@ -95,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.92070484">
+              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -145,7 +145,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instatask_db.bugs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="instatask_db.bugs" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/36f086b2/44456ef1-0a3b-4a64-b57a-60b5fb492edb/instatask_db..bugs">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -215,7 +215,6 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/spec/factories/bugs.rb" />
         <option value="$PROJECT_DIR$/spec/requests/api/v1/requests_spec.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/workers/bug_persister.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/api_application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
@@ -224,6 +223,7 @@
         <option value="$PROJECT_DIR$/app/controllers/api/bugs_controller.rb" />
         <option value="$PROJECT_DIR$/app/workers/bug_db_worker.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -918,14 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/api_application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1016,6 +1008,14 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92070484">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
