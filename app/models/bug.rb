@@ -13,8 +13,8 @@ class Bug < ActiveRecord::Base
   after_create :set_bug_list_updated_at
 
 
-  def cached_bugs_count(token)
-    Rails.cache.fetch("bugs_#{bug_list_updated_at}_#{token}") do
+  def self.cached_bugs_count(token)
+    Rails.cache.fetch("bugs_#{token}", expires_in: 20.seconds) do
       Bug.where(app_token: token).count
     end
   end

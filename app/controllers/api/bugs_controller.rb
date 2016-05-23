@@ -15,7 +15,7 @@ module Api
     end
 
     def get_count
-      num_of_bugs = Bug.where(app_token: params[:app_token]).count
+      num_of_bugs = Bug.cached_bugs_count(params[:app_token])
       render json: { total_number: num_of_bugs } , status: 200
     end
 
