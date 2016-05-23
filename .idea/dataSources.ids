@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - instatask_db@localhost" uuid="44456ef1-0a3b-4a64-b57a-60b5fb492edb">
+    <database-info product="MySQL" version="5.6.30" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="instatask_db"/>
+    <table name="bugs" schema="" catalog="instatask_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="app_token" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="bug_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="bug_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="bug_priority" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_rails_da0b73b3a0" table="states" schema="" catalog="instatask_db" columns="bug_id"/>
+      <index name="index_bugs_on_app_token_and_bug_number" unique="false" columns="app_token,bug_number"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="instatask_db" type="TABLE">
+      <column name="version" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="states" schema="" catalog="instatask_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="bug_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="device" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="os" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="memory" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="storage" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_rails_da0b73b3a0" columns="bug_id" ref-table="bugs" ref-schema="" ref-catalog="instatask_db" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="fk_rails_da0b73b3a0" unique="false" columns="bug_id"/>
+    </table>
+  </data-source>
+</component>
