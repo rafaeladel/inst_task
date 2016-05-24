@@ -4,8 +4,7 @@ module Api
 
     def create
       @new_bug = Bug.new(bug_params)
-      @new_state = State.new(state_params)
-      @new_bug.state = @new_state
+      @new_bug.state = State.new(state_params)
       if @new_bug.valid?
         BugDbWorker.perform_async(bug_params, state_params)
         render json: { number: @new_bug.bug_number }, status: 200
