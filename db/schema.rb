@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522135257) do
+ActiveRecord::Schema.define(version: 20160524150945) do
 
   create_table "bugs", force: :cascade do |t|
-    t.text     "app_token",           limit: 65535
-    t.integer  "bug_number",          limit: 4
-    t.integer  "bug_status",          limit: 4
-    t.integer  "bug_priority",        limit: 4
-    t.datetime "bug_list_updated_at"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.text     "app_token",    limit: 65535
+    t.integer  "bug_number",   limit: 4
+    t.integer  "bug_status",   limit: 4
+    t.integer  "bug_priority", limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "bugs", ["app_token", "bug_number"], name: "index_bugs_on_app_token_and_bug_number", length: {"app_token"=>10, "bug_number"=>nil}, using: :btree
