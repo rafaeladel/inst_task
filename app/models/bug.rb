@@ -14,7 +14,7 @@ class Bug < ActiveRecord::Base
 
 
   def self.cached_bugs_count(token)
-    Rails.cache.fetch("bugs_#{token}", expires_in: 20.seconds) do
+    Rails.cache.fetch("bugs_#{token}") do
       Bug.where(app_token: token).count
     end
   end
